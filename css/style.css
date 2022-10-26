@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Work Sans", sans-serif;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bolder;
+    color: black;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+:root {
+    --main-color: #10CAB7;
+    --sec-color: #EBECED;
+    --rd-color: #2C4755;
+}
+
+i {
+    color: var(--main-color);
+}
+
+.heading {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.heading p:first-child {
+    color: var(--sec-color);
+    line-height: 5px;
+    text-shadow: 2px 2px 5px;
+}
+
+/* Start header  */
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 5;
+}
+
+.icon {
+    width: 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.icon span {
+    background-color: #333;
+    margin-bottom: 5px;
+    height: 2px;
+}
+
+.icon span:first-child,
+.icon span:last-child {
+    width: 100%;
+}
+
+header .links:hover .icon span:nth-child(2) {
+    width: 100%;
+}
+
+.icon span:nth-child(2) {
+    width: 60%;
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+}
+
+.links {
+    position: relative;
+}
+
+header .links ul {
+    background-color: #f6f6f6;
+    position: absolute;
+    right: 0;
+    min-width: 200px;
+    top: calc(100% + 15px);
+    display: none;
+    z-index: 1;
+}
+
+header .links ul::before {
+    content: "";
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #f6f6f6 transparent;
+    position: absolute;
+    right: 5px;
+    top: -20px;
+}
+
+header .links:hover ul {
+    display: block;
+}
+
+header .links ul li a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: #333;
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+}
+
+header .links ul li a:hover {
+    color: var(--main-color);
+}
+
+header .links ul li:not(:last-child) a {
+    border-bottom: 1px solid #ddd;
+}
+
+/* end header  */
+
+/* start bg  */
+
+.bg {
+    background-image: url(../images/landing.jpg);
+    height: 100vh;
+    background-size: cover;
+}
+
+.bg .container {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bg h1 {
+    color: var(--main-color);
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 50px;
+}
+
+.bg p {
+    line-height: 10px;
+    font-size: 19px;
+}
+
+/* end bg  */
+
+/* start services  */
+.services .right {
+    text-align: center;
+    position: relative;
+    height: 100%;
+}
+
+.services .right img {
+    width: 260px;
+}
+
+.services .right::before {
+    content: "";
+    background-color: var(--rd-color);
+    width: 100px;
+    height: calc(100% + 100px);
+    top: -50px;
+    position: absolute;
+    right: 20px;
+    z-index: -1;
+}
+
+/* End services  */
+
+/* start about */
+.about {
+    padding-bottom: 120px;
+}
+
+.left img {
+    max-width: 100%;
+}
+
+.left::before {
+    content: "";
+    background-color: var(--sec-color);
+    width: 100px;
+    height: calc(100% + 100px);
+    position: absolute;
+    z-index: -1;
+    top: -50px;
+    left: -10px;
+}
+
+.left::after {
+    content: "";
+    border-left: 80px solid var(--main-color);
+    border-bottom: 80px solid var(--main-color);
+    width: 200px;
+    height: calc(77% + 100px);
+    position: absolute;
+    top: -50px;
+    right: -140px;
+    z-index: -1;
+}
+
+.text hr {
+    border: 1px solid var(--main-color);
+    width: 50%;
+}
+
+/* End about  */
+
+/* Start Contact */
+.contact {
+    padding-bottom: 120px;
+}
+
+.contact p {
+    line-height: 30px;
+    color: var(--rd-color);
+}
+
+.contact a {
+    color: var(--main-color);
+}
+
+.contact i {
+    color: var(--rd-color);
+}
+
+/* End contact */
+
+/* Start footer  */
+footer {
+    background-color: var(--rd-color);
+    padding: 5px;
+    text-align: center;
+}
+
+footer p {
+    padding-top: 10px;
+    font-size: 18px;
+}
+
+footer strong {
+    color: var(--main-color);
+}
